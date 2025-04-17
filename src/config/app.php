@@ -80,7 +80,12 @@ return [
     |
     */
 
-    'locale' => 'en',
+    // 初期値
+    // 'locale' => 'en',
+
+    // Fortify導入後
+    // 初期値から言語設定を日本語jaに変更
+    'locale' => 'ja',
 
     /*
     |--------------------------------------------------------------------------
@@ -174,6 +179,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        // サービスプロバイダとしてFortifyを追加
+        App\Providers\FortifyServiceProvider::class,
 
     ],
 
