@@ -20,4 +20,10 @@ use App\Http\Controllers\AuthController;
 //     return view('welcome');
 // });
 
-Route::get('/', [AuthController::class, 'index']);
+// indexアクションを呼び出す設定
+// Route::get('/', [AuthController::class, 'index']);
+
+// 上記に追記を加えて、ログイン状態の場合のみトップページであるindexアクションを呼び出せるようにする
+Route::middleware('auth')->group(function () {
+    Route::get('/', [AuthController::class, 'index']);
+});
