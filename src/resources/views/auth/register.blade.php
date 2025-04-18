@@ -12,7 +12,9 @@
         <h2>会員登録</h2>
     </div>
     <!-- 会員登録のform -->
-    <form class="form">
+     <!-- action属性を/registerに指定してmethod="post"で情報を渡す -->
+    <form class="form" action="/register" method="post">
+        @csrf
         <!-- group①:名前 -->
         <div class="form__group">
             <div class="form__group-title">
